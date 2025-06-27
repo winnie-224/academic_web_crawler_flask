@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Academic paper finder</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 40px;
+                background-color: #f5f5f5;
+            }
+            form {
+                margin-bottom: 30px;
+            }
+            .paper {
+                background: #fff;
+                padding: 20px;
+                border-radius: 8px;
+                margin-bottom: 20px;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            }
+            .paper h3 {
+                margin: 0 0 10px;
+            }
+            .paper a {
+                color: #007BFF;
+                text-decoration: none;
+            }
+            .paper a:hover {
+                text-decoration: underline;
+            }
+            .alert-warning { color: #856404; background-color: #fff3cd; padding: 10px; border: 1px solid #ffeeba; margin-bottom: 15px; }
+            .alert-danger  { color: #721c24; background-color: #f8d7da; padding: 10px; border: 1px solid #f5c6cb; margin-bottom: 15px; }
+        </style>
+          
+    </head>
+    <body>
+        
+        <h1>Academic Paper Finder</h1>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div>
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }}">
+                    {{ message }}
+                    </div>
+                {% endfor %}
+                </div>
+            {% endif %}
+            {% endwith %}
+
+        <form method = "POST">
+            <input type="text" name="topic" placeholder="Enter your research topic" style="width: 300px; padding: 8px;" required>
+            <br><br>
+            <fieldset>
+                <legend>Select sources to search:</legend>
+        
+                <input type="checkbox" id="arxiv" name="sources" value="arxiv"
+                       {% if 'arxiv' in request.form.getlist('sources') or request.method == 'GET' %}checked{% endif %}>
+                <label for="arxiv">arXiv</label>
+        
+                <br>
+        
+                <input type="checkbox" id="semanticscholar" name="sources" value="semanticscholar"
+                       {% if 'semanticscholar' in request.form.getlist('sources') or request.method == 'GET' %}checked{% endif %}>
+                <label for="semanticscholar">Semantic Scholar</label>
+            </fieldset>
+            <br>
+            <label for="custom_sources">Add custom domains (comma-separated):</label>
+            <input type="text" id="custom_sources" name="custom_sources" placeholder="e.g. acm.org, ieeexplore.ieee.org">
+
+            <br><br>
+            
+            <button type = "submit" style="padding: 8px 16px;">Search</button>
+        </form>
+        {% for paper in results %}
+        <div class="paper">
+            <h3>{{paper.title}}</h3>
+            <p><strong>Source:</strong>{{paper.source}}</p>
+            <p>{{paper.abstract}}</p>
+            <p><a href="{{paper.url}}" target="_blank">Read full paper</a></p>
+        </div>
+        {% endfor %}
+    </body>
+</html>
