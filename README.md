@@ -31,10 +31,10 @@ Users can:
 ## Technology
 
  - Python 3.10+
- - Flask – Web framework
- - BeautifulSoup (bs4) – HTML parsing and scraping
- - Requests – HTTP client
- - duckduckgo_search – DuckDuckGo search API wrapper
- - python-dotenv – Managing environment variables
- - Render – Cloud deployment platform
- - .env – Local environment variable management
+ - Flask - Web framework
+ - BeautifulSoup (bs4) - HTML parsing and scraping
+ - Requests - HTTP client
+ - duckduckgo_search - DuckDuckGo search API wrapper
+ - python-dotenv - Managing environment variables
+ - Render - Cloud deployment platform
+ - .env - Local environment variable management
