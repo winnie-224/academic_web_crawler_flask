@@ -27,7 +27,8 @@ Users can:
 
 💡 Flash messaging for rate limit errors or invalid results
 
-##Technology
+
+## Technology
  Backend
  - Python 3.10+
  - Flask – Web framework
