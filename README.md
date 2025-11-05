@@ -26,10 +26,11 @@ Users can:
 🔐 Secure deployment with environment variables
 
 💡 Flash messaging for rate limit errors or invalid results
+<img width="643" height="373" alt="Screenshot 2025-11-05 140837" src="https://github.com/user-attachments/assets/73228616-3fc8-45cd-a0f5-2b399634f377" />
 
 ## Description
 Academic Research Web Crawler
-This is a simple web application that allows users to search for academic research papers on specific topics using DuckDuckGo search. It focuses on two primary sources — arXiv and Semantic Scholar — and extracts metadata such as the title and abstract from the results.
+This is a simple web application that allows users to search for academic research papers on specific topics using DuckDuckGo search. It focuses on two primary sources : arXiv and Semantic Scholar, and extracts metadata such as the title and abstract from the results.
 https://academic-web-crawler.onrender.com/
 
 Technology
