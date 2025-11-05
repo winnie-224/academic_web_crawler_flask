@@ -29,12 +29,11 @@ Users can:
 <img width="643" height="373" alt="Screenshot 2025-11-05 140837" src="https://github.com/user-attachments/assets/73228616-3fc8-45cd-a0f5-2b399634f377" />
 
 ## Description
-Academic Research Web Crawler
+<b>Academic Research Web Crawler</b>
 This is a simple web application that allows users to search for academic research papers on specific topics using DuckDuckGo search. It focuses on two primary sources : arXiv and Semantic Scholar, and extracts metadata such as the title and abstract from the results.
 https://academic-web-crawler.onrender.com/
 
-Technology
-
+<b>Technology<b>
  - Python 3.10+
  - Flask - Web framework
  - BeautifulSoup (bs4) - HTML parsing and scraping
