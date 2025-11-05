@@ -33,7 +33,7 @@ Users can:
 This is a simple web application that allows users to search for academic research papers on specific topics using DuckDuckGo search. It focuses on two primary sources : arXiv and Semantic Scholar, and extracts metadata such as the title and abstract from the results.
 https://academic-web-crawler.onrender.com/
 
-<i>Technology</i>
+<b>Technology</b>
  - Python 3.10+
  - Flask - Web framework
  - BeautifulSoup (bs4) - HTML parsing and scraping
