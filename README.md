@@ -28,10 +28,11 @@ Users can:
 💡 Flash messaging for rate limit errors or invalid results
 
 ## Description
+Academic Research Web Crawler
 This is a simple web application that allows users to search for academic research papers on specific topics using DuckDuckGo search. It focuses on two primary sources — arXiv and Semantic Scholar — and extracts metadata such as the title and abstract from the results.
 https://academic-web-crawler.onrender.com/
 
- **Technology**
+Technology
 
  - Python 3.10+
  - Flask - Web framework
